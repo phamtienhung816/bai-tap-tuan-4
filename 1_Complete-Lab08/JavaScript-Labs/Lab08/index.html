@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 08 – JavaScript 1: Language Foundations – Phạm Tiến Hưng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab08">
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../"><span class="js-badge">JS</span> Tiến Hưng · Labs</a>
+    <ul class="menu" style="display:flex;position:static;flex-direction:row;background:none;border:0;padding:0">
+      <li><a href="../">Trang chủ</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+  <div class="lab-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="../">Trang chủ</a> / Lab 08 &nbsp;·&nbsp; Lab khác: <a href="../Lab09/">Lab 09</a> · <a href="../Lab10/">Lab 10</a></div>
+      <h1>Lab 08 – JavaScript 1: Language Foundations</h1>
+      <p>Làm quen cách nhúng JavaScript vào trang, đọc lỗi bằng Console và các thành phần nền tảng của ngôn ngữ: đối tượng có sẵn, mảng, hàm, đối tượng tự tạo.</p>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="note">Một số bài có hộp thoại <b>alert("Hello World!")</b> (8.2–8.4) – bấm OK để xem trang. Bài 8.5 cần mở <b>F12 → Console</b> để xem kết quả.</p>
+    <div class="ex-grid">
+      <article class="ex-card">
+        <span class="no">Exercise 8.1</span>
+        <h3>Enabling/Disabling JavaScript</h3>
+        <p>Trang kiểm tra JavaScript đang bật hay tắt: script in thông báo màu xanh, noscript hiện khi JS bị tắt.</p>
+        <div class="files">Exercise01/ · index.html</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise01/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise01" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.2</span>
+        <h3>Embedded JavaScript</h3>
+        <p>Nhúng script trong thẻ &lt;head&gt;, hiển thị alert &quot;Hello World!&quot; trước khi trang hiện ra.</p>
+        <div class="files">Exercise02/ · index.html</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise02/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise02" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.3</span>
+        <h3>External JavaScript</h3>
+        <p>Tách code ra file hello.js, dùng document.write để in chữ và biến count.</p>
+        <div class="files">Exercise03/ · index.html · hello.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise03/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise03" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.4</span>
+        <h3>Using noscript</h3>
+        <p>Thêm thông báo dành cho người dùng đã tắt JavaScript.</p>
+        <div class="files">Exercise04/ · index.html · hello.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise04/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise04" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.5</span>
+        <h3>Using the Browser Console</h3>
+        <p>Chuyển hello.js vào thư mục js/, xem lỗi &quot;doccumment is not defined&quot;, dùng console.log/warn/error.</p>
+        <div class="files">Exercise05/ · index.html · error-demo.html · js/hello.js · js/hello-error.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise05/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise05" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.6</span>
+        <h3>Using Built-in JavaScript Objects</h3>
+        <p>So sánh String object với string literal (== và ===), dùng Date và Math.</p>
+        <div class="files">Exercise06/ · index.html · js/lab08-walkthrough06.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise06/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise06" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.7</span>
+        <h3>Arrays</h3>
+        <p>push(), unshift(), duyệt mảng và dựng bảng lịch 30 ngày bắt đầu từ Chủ nhật.</p>
+        <div class="files">Exercise07/ · index.html · js/lab08-walkthrough07.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise07/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise07" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.8</span>
+        <h3>JavaScript Functions</h3>
+        <p>Hàm outputBox(num) trả về chuỗi HTML, gọi trong vòng lặp; thử phạm vi biến global/local.</p>
+        <div class="files">Exercise08/ · index.html · js/lab08-walkthrough08.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise08/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise08" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.9</span>
+        <h3>Functions as Objects</h3>
+        <p>Hàm lồng nhau, hàm gán vào biến, hàm ẩn danh truyền làm tham số để tính thuế và tổng tiền.</p>
+        <div class="files">Exercise09/ · index.html · js/lab08-walkthrough09.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise09/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise09" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.10</span>
+        <h3>Creating JavaScript Objects</h3>
+        <p>Tạo object bằng new Object(), {}, literal và constructor function có phương thức output().</p>
+        <div class="files">Exercise10/ · index.html · js/lab08-walkthrough10.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise10/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise10" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 8.11</span>
+        <h3>Arrays of Objects</h3>
+        <p>Duyệt mảng Country bằng ký pháp ngoặc vuông và for..in, hiển thị cờ từng quốc gia.</p>
+        <div class="files">Exercise11/ · index.html · js/lab08-walkthrough11.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise11/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise11" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Bài tập cuối Lab</span>
+        <h3>Bài tập cuối Lab – Travel Posts</h3>
+        <p>Thay các danh sách viết cứng (châu lục, quốc gia, bài viết, phân trang) bằng hàm JavaScript đọc dữ liệu từ travel-data.js.</p>
+        <div class="files">Exercise12/ · index.html · js/travel-data.js · js/travel-functions.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise12/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab08/Exercise12" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap"><span>Phạm Tiến Hưng · 31241025521 · Lớp HP 26C1INF50902701</span><span><a href="../">&larr; Về trang chủ JavaScript Labs</a></span></div>
+</footer>
+</body>
+</html>
