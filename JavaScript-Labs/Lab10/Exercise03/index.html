@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>  
+    
+    <title>Lab 10</title>    
+      
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/lab10.css">
+    
+    <!-- Exercise 10.1: jQuery từ CDN (HTTPS) + bản dự phòng cục bộ -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+      window.jQuery ||
+      document.write('<script src="../assets/js/jquery-3.1.1.min.js"><\/script>');
+    </script>    
+    
+</head>
+<body class="form-body">
+
+
+<div class="form-box">
+  <h1>Registration</h1>
+  <hr>
+
+<form method="get" action="#" name="sampleForm">
+    <label class="icon" for="username">User Name</label>
+    <input type="text" name="username" id="username" placeholder="User Name" />
+    
+    <label class="icon" for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="Email" />   
+    
+    <label class="icon" for="pass">Password</label>
+    <input type="password" name="pass1" id="pass1" placeholder="Password" />      
+    
+    <label class="icon" for="pass">Password Again</label>
+    <input type="password" name="pass2" id="pass2" placeholder="Password" />       
+
+    <button type="submit" ><i class="fa fa-reply fa-fw"></i> Register</button> 
+</form>
+<div id="errors" class="hidden"></div>
+
+</div>
+       
+<a href="../index.html" class="lab-nav" style="position:fixed;right:14px;bottom:14px;z-index:999;background:#1f2a44;color:#fff;padding:8px 14px;border-radius:20px;font:13px/1.2 Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">&larr; Lab 10</a>
+</body>
+
+<script type="text/javascript" language="javascript" src="js/lab10-walkthrough03.js"></script>    
+    
+</html>

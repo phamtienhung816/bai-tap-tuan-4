@@ -1,0 +1,207 @@
+/* ===== JavaScript Labs – Phạm Tiến Hưng ===== */
+:root {
+  --ink: #1b2236;
+  --ink-soft: #4a5370;
+  --muted: #7a8299;
+  --bg: #f6f4ef;
+  --card: #ffffff;
+  --line: #e6e2d8;
+  --accent: #f0b429;      /* vàng JavaScript */
+  --accent-dark: #c98a00;
+  --navy: #1f2a44;
+  --lab08: #f0b429;
+  --lab09: #3aa58c;
+  --lab10: #4c6ef5;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(27, 34, 54, .08);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+code { font-family: "JetBrains Mono", Consolas, monospace; font-size: .92em;
+       background: #fff3d1; padding: 1px 6px; border-radius: 6px; }
+
+.wrap { width: min(1120px, 92%); margin: 0 auto; }
+
+/* ---------- top nav ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(246, 244, 239, .88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; text-decoration: none; letter-spacing: -.02em; }
+.brand .js-badge {
+  width: 34px; height: 34px; border-radius: 8px; background: var(--accent);
+  display: grid; place-items: end; padding: 0 5px 2px 0;
+  font: 800 15px/1 "JetBrains Mono", Consolas, monospace; color: var(--ink);
+}
+.menu { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.menu a { text-decoration: none; padding: 8px 12px; border-radius: 10px; font-size: 14px; color: var(--ink-soft); font-weight: 600; }
+.menu a:hover, .menu a.active { background: #fff; color: var(--ink); }
+.menu-toggle { display: none; background: none; border: 0; font-size: 24px; cursor: pointer; color: var(--ink); }
+
+/* ---------- hero ---------- */
+.hero { padding: 64px 0 40px; }
+.hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+.eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+           color: var(--accent-dark); background: #fff3d1; padding: 4px 12px; border-radius: 999px; }
+.hero h1 { font-size: clamp(34px, 5vw, 56px); line-height: 1.08; margin: 16px 0 14px; letter-spacing: -.03em; }
+.hero h1 .hl { background: linear-gradient(transparent 62%, var(--accent) 62%); }
+.hero p.lead { font-size: 18px; color: var(--ink-soft); max-width: 560px; }
+.typed { font-family: "JetBrains Mono", Consolas, monospace; color: var(--ink); font-size: 15px;
+         background: var(--navy); color: #e8ecf8; padding: 12px 16px; border-radius: 12px; display: inline-block; margin-top: 8px; min-height: 46px; width: min(100%, 560px); white-space: nowrap; overflow: hidden; }
+.typed .kw { color: #f0b429; }
+.typed .caret { display: inline-block; width: 8px; background: #e8ecf8; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.profile-card {
+  background: var(--card); border-radius: 22px; box-shadow: var(--shadow); padding: 28px;
+  border: 1px solid var(--line); position: relative; overflow: hidden;
+}
+.profile-card::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 92px;
+  background: linear-gradient(120deg, var(--navy), #33416b);
+}
+.avatar {
+  position: relative; width: 112px; height: 112px; border-radius: 50%;
+  border: 5px solid #fff; background: var(--accent); margin: 30px 0 14px;
+  display: grid; place-items: center; overflow: hidden;
+  font: 800 38px/1 "Be Vietnam Pro", Arial, sans-serif; color: var(--ink);
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.profile-card h2 { margin: 0; font-size: 24px; }
+.profile-card .role { color: var(--muted); margin: 2px 0 16px; font-size: 14px; }
+.info { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; }
+.info li { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+.info li span:first-child { color: var(--muted); }
+.info li span:last-child { font-weight: 700; text-align: right; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none; cursor: pointer;
+  font-weight: 700; font-size: 15px; padding: 11px 18px; border-radius: 12px; border: 2px solid var(--ink);
+  background: var(--ink); color: #fff; transition: transform .15s, box-shadow .15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(27,34,54,.15); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.yellow { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+/* ---------- sections ---------- */
+section { padding: 56px 0; }
+.sec-title { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
+.sec-title .num { font: 700 14px/1 "JetBrains Mono", Consolas, monospace; color: var(--accent-dark); }
+.sec-title h2 { margin: 0; font-size: clamp(26px, 3.4vw, 36px); letter-spacing: -.02em; }
+.prose { font-size: 17px; color: var(--ink-soft); max-width: 820px; }
+.prose p { margin: 0 0 14px; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.stat b { display: block; font-size: 32px; line-height: 1.1; }
+.stat span { color: var(--muted); font-size: 14px; }
+
+/* ---------- lab cards ---------- */
+.labs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lab-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 26px;
+  display: flex; flex-direction: column; box-shadow: var(--shadow); position: relative; overflow: hidden;
+  transition: transform .2s;
+}
+.lab-card:hover { transform: translateY(-4px); }
+.lab-card::after { content: ""; position: absolute; left: 0; top: 0; height: 6px; width: 100%; background: var(--c); }
+.lab-card .tag { font: 700 13px/1 "JetBrains Mono", Consolas, monospace; color: var(--c); }
+.lab-card h3 { margin: 10px 0 6px; font-size: 22px; line-height: 1.25; }
+.lab-card p { color: var(--ink-soft); font-size: 15px; flex: 1; }
+.lab-card .meta { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+.lab-card .btn { align-self: flex-start; background: var(--c); border-color: var(--c); color: #fff; }
+.lab-card.l08 { --c: var(--lab08); } .lab-card.l08 .btn { color: var(--ink); }
+.lab-card.l09 { --c: var(--lab09); }
+.lab-card.l10 { --c: var(--lab10); }
+
+/* ---------- tabs (kiến thức) ---------- */
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+.tab-btn {
+  border: 2px solid var(--line); background: var(--card); padding: 10px 16px; border-radius: 12px;
+  font: 700 14px/1 "Be Vietnam Pro", Arial, sans-serif; cursor: pointer; color: var(--ink-soft);
+}
+.tab-btn.active { border-color: var(--ink); color: var(--ink); background: #fff3d1; }
+.tab-panel { display: none; background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
+.tab-panel.active { display: block; animation: fadeUp .35s ease; }
+.tab-panel h3 { margin-top: 0; }
+.learn-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.learn-list li { padding: 14px 16px; border-radius: 12px; background: var(--bg); font-size: 15px; color: var(--ink-soft); }
+.learn-list li b { display: block; color: var(--ink); margin-bottom: 2px; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ---------- self review ---------- */
+.review { display: grid; grid-template-columns: 1.3fr 1fr; gap: 22px; }
+.review blockquote {
+  margin: 0; background: var(--navy); color: #e8ecf8; border-radius: 20px; padding: 30px; font-size: 16.5px;
+}
+.review blockquote p { margin: 0 0 12px; }
+.review blockquote footer { color: var(--accent); font-weight: 700; font-size: 14px; }
+.ecom { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+.ecom h3 { margin-top: 0; }
+.ecom ul { padding-left: 18px; margin: 0; color: var(--ink-soft); }
+.ecom li { margin-bottom: 8px; }
+
+/* mini demo giỏ hàng */
+.cart-demo { margin-top: 16px; padding: 14px; border-radius: 12px; background: var(--bg); font-size: 14px; }
+.cart-demo .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.qty { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; }
+.qty button { border: 0; background: #fff; width: 30px; height: 30px; cursor: pointer; font-size: 16px; }
+.qty span { min-width: 30px; text-align: center; font-weight: 700; }
+.cart-total { font-weight: 800; font-size: 18px; }
+
+/* ---------- footer ---------- */
+.site-footer { padding: 30px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+/* reveal on scroll */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.show { opacity: 1; transform: none; }
+
+/* ---------- Lab pages ---------- */
+.lab-hero { padding: 48px 0 18px; }
+.lab-hero .crumb { font-size: 14px; color: var(--muted); }
+.lab-hero .crumb a { color: var(--ink-soft); }
+.lab-hero h1 { font-size: clamp(30px, 4.4vw, 46px); margin: 10px 0 8px; letter-spacing: -.02em; }
+.lab-hero p { color: var(--ink-soft); max-width: 760px; font-size: 17px; }
+.lab-hero .bar { height: 6px; width: 90px; border-radius: 6px; background: var(--c); margin-top: 14px; }
+.ex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; padding-bottom: 56px; }
+.ex-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; }
+.ex-card .no { font: 700 13px/1 "JetBrains Mono", Consolas, monospace; color: var(--c); }
+.ex-card h3 { margin: 8px 0 6px; font-size: 18px; line-height: 1.3; }
+.ex-card p { margin: 0 0 14px; color: var(--ink-soft); font-size: 14.5px; flex: 1; }
+.ex-card .files { font: 12.5px/1.5 "JetBrains Mono", Consolas, monospace; color: var(--muted); margin-bottom: 14px; }
+.ex-card .acts { display: flex; gap: 8px; flex-wrap: wrap; }
+.ex-card .acts a { font-size: 14px; padding: 8px 14px; border-radius: 10px; }
+.ex-card .acts a.open { background: var(--c); border-color: var(--c); color: #fff; }
+body.lab08 { --c: var(--accent-dark); } body.lab09 { --c: var(--lab09); } body.lab10 { --c: var(--lab10); }
+.note { background: #fff3d1; border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 8px; font-size: 14.5px; color: var(--ink-soft); margin: 0 0 22px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .hero-grid, .review { grid-template-columns: 1fr; }
+  .labs { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .learn-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .menu-toggle { display: block; }
+  .menu { display: none; position: absolute; top: 62px; left: 0; right: 0; flex-direction: column;
+          background: var(--bg); border-bottom: 1px solid var(--line); padding: 10px 4%; }
+  .menu.open { display: flex; }
+  .hero { padding-top: 36px; }
+}
