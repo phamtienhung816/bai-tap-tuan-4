@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Exercise 8.1 – Enabling/Disabling JavaScript | Phạm Tiến Hưng – 31241025521 -->
+<html lang="vi">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Exercise 8.1 – Enabling/Disabling JavaScript</title>
+   <link rel="stylesheet" href="../assets/css/lab08.css">
+   <style>
+      body { font-family: Arial, sans-serif; text-align: center; padding: 40px 16px; }
+      .status { display: inline-block; padding: 18px 28px; border-radius: 8px; font-size: 22px; font-weight: bold; }
+      .on  { background: #d4f5d4; color: #1d6b1d; border: 2px solid #1d6b1d; }
+      .off { background: #fde2e2; color: #9b1c1c; border: 2px solid #9b1c1c; }
+   </style>
+</head>
+<body>
+<header><h1>Exercise 8.1 – Enabling / Disabling JavaScript</h1></header>
+<p>Trang kiểm tra tương tự http://examples.funwebdev.com/JavaScriptTest.php</p>
+
+<!-- Khi JavaScript bật: đoạn script ghi ra thông báo màu xanh -->
+<script>
+   document.write('<div class="status on">You have JavaScript enabled</div>');
+   document.write('<p>Trình duyệt: ' + navigator.userAgent + '</p>');
+</script>
+
+<!-- Khi JavaScript tắt: chỉ thẻ noscript được hiển thị -->
+<noscript><div class="status off">You have JavaScript disabled</div></noscript>
+
+<p style="margin-top:30px;color:#555">Cách kiểm tra (Chrome): F12 &rarr; Ctrl+Shift+P &rarr; gõ <b>Disable JavaScript</b> &rarr; F5.
+Bật lại bằng lệnh <b>Enable JavaScript</b>.</p>
+<a href="../index.html" class="lab-nav" style="position:fixed;right:14px;bottom:14px;z-index:999;background:#1f2a44;color:#fff;padding:8px 14px;border-radius:20px;font:13px/1.2 Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">&larr; Lab 08</a>
+</body>
+</html>

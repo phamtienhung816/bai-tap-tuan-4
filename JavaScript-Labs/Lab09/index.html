@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 09 – JavaScript 2: DOM and Events – Phạm Tiến Hưng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab09">
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../"><span class="js-badge">JS</span> Tiến Hưng · Labs</a>
+    <ul class="menu" style="display:flex;position:static;flex-direction:row;background:none;border:0;padding:0">
+      <li><a href="../">Trang chủ</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+  <div class="lab-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="../">Trang chủ</a> / Lab 09 &nbsp;·&nbsp; Lab khác: <a href="../Lab08/">Lab 08</a> · <a href="../Lab10/">Lab 10</a></div>
+      <h1>Lab 09 – JavaScript 2: DOM and Events</h1>
+      <p>Thay document.write bằng cách làm việc trực tiếp với cây DOM: chọn, đọc, sửa, tạo, xóa phần tử và phản hồi sự kiện của người dùng.</p>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="note">Bài 9.2 và 9.6 nên mở kèm <b>F12</b> (Console / Sources) để thấy đầy đủ kết quả. Bài 9.5 và 9.6 có alert khi tải trang hoặc rê chuột.</p>
+    <div class="ex-grid">
+      <article class="ex-card">
+        <span class="no">Exercise 9.1</span>
+        <h3>Basic DOM Selection</h3>
+        <p>getElementById, getElementsByTagName/ClassName, querySelector(All), innerHTML/innerText, getAttribute/setAttribute, style.</p>
+        <div class="files">Exercise01/ · index.html · js/lab09-walkthrough01.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise01/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab09/Exercise01" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 9.2</span>
+        <h3>DOM Family Relations</h3>
+        <p>firstChild, nextSibling, parentNode, childNodes; tô màu nền các node phần tử (nodeType 1).</p>
+        <div class="files">Exercise02/ · index.html · js/lab09-walkthrough02.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise02/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab09/Exercise02" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 9.3</span>
+        <h3>Modifying the DOM</h3>
+        <p>createElement + createTextNode + appendChild để thêm đoạn văn, removeChild để xóa một mục.</p>
+        <div class="files">Exercise03/ · index.html · js/lab09-walkthrough03.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise03/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab09/Exercise03" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 9.4</span>
+        <h3>Simple Event Handling</h3>
+        <p>Nút Hide/Show có hiệu ứng CSS transition + setTimeout; ảnh chuyển xám khi mouseover, trở lại khi mouseout.</p>
+        <div class="files">Exercise04/ · index.html · js/lab09-walkthrough04.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise04/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab09/Exercise04" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 9.5</span>
+        <h3>Responding to Load Events</h3>
+        <p>So sánh bản lỗi (script chạy trước khi DOM sẵn sàng) với bản dùng window load event.</p>
+        <div class="files">Exercise05/ · index.html · error-demo.html · js/lab09-walkthrough05.js · js/error-demo.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise05/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab09/Exercise05" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 9.6</span>
+        <h3>Debugging Events</h3>
+        <p>Gắn mouseover cho từng .movingDiv, dùng breakpoint trong DevTools để xem e và e.target.</p>
+        <div class="files">Exercise06/ · index.html · js/lab09-walkthrough06.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise06/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab09/Exercise06" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 9.7</span>
+        <h3>Working with Forms</h3>
+        <p>focus/blur đổi màu nền ô nhập trong form đăng ký.</p>
+        <div class="files">Exercise07/ · index.html · js/lab09-walkthrough07.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise07/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab09/Exercise07" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+      <article class="ex-card">
+        <span class="no">Exercise 9.8</span>
+        <h3>Form Validation</h3>
+        <p>Chặn submit khi có ô trống (preventDefault) và hiển thị danh sách lỗi ngay trên trang.</p>
+        <div class="files">Exercise08/ · index.html · js/lab09-walkthrough08.js</div>
+        <div class="acts">
+          <a class="btn open" href="Exercise08/">Mở bài &rarr;</a>
+          <a class="btn ghost" href="https://github.com/phamtienhung816/bai-tap-css-tuan-3/tree/main/JavaScript-Labs/Lab09/Exercise08" target="_blank" rel="noopener">Xem code</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap"><span>Phạm Tiến Hưng · 31241025521 · Lớp HP 26C1INF50902701</span><span><a href="../">&larr; Về trang chủ JavaScript Labs</a></span></div>
+</footer>
+</body>
+</html>
