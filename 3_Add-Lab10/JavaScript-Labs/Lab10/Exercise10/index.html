@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>      
+    <title>Lab 10</title>    
+    <link rel="stylesheet" href="../assets/css/consume.css">
+        
+    <!-- Exercise 10.1: jQuery từ CDN (HTTPS) + bản dự phòng cục bộ -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+      window.jQuery ||
+      document.write('<script src="../assets/js/jquery-3.1.1.min.js"><\/script>');
+    </script>    
+    <script type="text/javascript" language="javascript" src="js/lab10-walkthrough10.js"></script>      
+    
+</head>
+<body >
+
+<h2 style="font-family:Arial">Exercise 10.10 – jqXHR Handling</h2>
+<button id="consume">Consume</button>
+<button id="consumeError">Thử lỗi (URL sai)</button>
+<button id="consumeOriginal">Thử dịch vụ gốc (http)</button>
+<p id="status" style="font-family:Arial;font-size:14px;color:#444"></p> 
+<div id="results">
+    <ul></ul>
+</div>
+<div class="animLoading"><img src="../assets/images/ajax-loader.gif" /></div>  
+       
+<a href="../index.html" class="lab-nav" style="position:fixed;right:14px;bottom:14px;z-index:999;background:#1f2a44;color:#fff;padding:8px 14px;border-radius:20px;font:13px/1.2 Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">&larr; Lab 10</a>
+</body>
+  
+    
+</html>

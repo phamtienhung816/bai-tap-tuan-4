@@ -1,0 +1,102 @@
+[
+ {
+  "id": 1,
+  "name": "Athens",
+  "country": "Greece"
+ },
+ {
+  "id": 2,
+  "name": "Banff",
+  "country": "Canada"
+ },
+ {
+  "id": 3,
+  "name": "Barcelona",
+  "country": "Spain"
+ },
+ {
+  "id": 4,
+  "name": "Battle",
+  "country": "United Kingdom"
+ },
+ {
+  "id": 5,
+  "name": "Berlin",
+  "country": "Germany"
+ },
+ {
+  "id": 6,
+  "name": "Budapest",
+  "country": "Hungary"
+ },
+ {
+  "id": 7,
+  "name": "Calgary",
+  "country": "Canada"
+ },
+ {
+  "id": 8,
+  "name": "Edinburgh",
+  "country": "United Kingdom"
+ },
+ {
+  "id": 9,
+  "name": "Florence",
+  "country": "Italy"
+ },
+ {
+  "id": 10,
+  "name": "Halifax",
+  "country": "Canada"
+ },
+ {
+  "id": 11,
+  "name": "London",
+  "country": "United Kingdom"
+ },
+ {
+  "id": 12,
+  "name": "Lunenburg",
+  "country": "Canada"
+ },
+ {
+  "id": 13,
+  "name": "Madrid",
+  "country": "Spain"
+ },
+ {
+  "id": 14,
+  "name": "Munich",
+  "country": "Germany"
+ },
+ {
+  "id": 15,
+  "name": "Nassau",
+  "country": "Bahamas"
+ },
+ {
+  "id": 16,
+  "name": "New York City",
+  "country": "United States"
+ },
+ {
+  "id": 17,
+  "name": "Rome",
+  "country": "Italy"
+ },
+ {
+  "id": 18,
+  "name": "Santorini",
+  "country": "Greece"
+ },
+ {
+  "id": 19,
+  "name": "Venice",
+  "country": "Italy"
+ },
+ {
+  "id": 20,
+  "name": "Accra",
+  "country": "Ghana"
+ }
+]
